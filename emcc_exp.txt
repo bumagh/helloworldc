@@ -1,0 +1,10 @@
+emsdk install latest
+./emsdk install latest
+./emsdk  activate latest
+source "/workspace/emsdk/emsdk_env.sh"
+emcc -v
+mkdir hello
+cd hello
+touch main.c
+emcc main.c -o index.html
+emrun --no_browser --port 3000 index.html
